@@ -1,7 +1,7 @@
 clear; close all; clc;
 
 % read the training data
-data = load('ex1data1.txt');
+data = load('examples.txt');
 
 % initialize Matrices and Variables
 X = data(:, 1);     % featue matrix
@@ -30,3 +30,7 @@ hold off;
 
 % plotting the cost function
 plot(1: iterations, J_history, '-b');
+
+% Predicting Profits
+fprintf('Prediction for 35000:\t%f\n', ([1, 3.5] * theta) * 10000);
+fprintf('Prediction for 70000:\t%f\n', ([1, 7] * theta) * 10000);
